@@ -79,3 +79,11 @@ function contar() {
                   
              } 
     } 
+
+
+
+//AJUSTAR TAMAÑO DE TEXAREA
+function textAreaAdjust(element) {
+  element.style.height = "1px";
+  element.style.height = (10 + element.scrollHeight)+"px";
+}

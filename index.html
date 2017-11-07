@@ -24,9 +24,9 @@
 		<!-- CONTENEDOR DERECHO -->
 		<article class="containerRigth">
 			<form action="">
-				<textarea class="textarea" id="textarea" placeholder="¿Qué está pasando?" onkeyup="contar();disableButton(this);" ></textarea>
+				<textarea class="textarea" id="textarea" placeholder="¿Qué está pasando?" onkeyup="contar();disableButton(this);textAreaAdjust(this)" ></textarea>
 				<hr>
-				<input type="button" value="TWEET" id="btnButton" >
+				<input type="button" value="TWEET" id="btnButton" disabled="true">
 				<input type="text" value="140" id="contador" disabled="true">
 			</form>
 			<label for="textCamp"></label>
