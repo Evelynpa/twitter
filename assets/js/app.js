@@ -3,20 +3,31 @@ function add(){
 
 			//obtener el valor del texarea
 	var text = document.getElementById('textarea').value;
+
 		//crear etiqueta p
 		var campP = document.createElement('p');
 		campP.classList.add('textResult');
 		var nodoText = document.createTextNode(text);
 
-		//agregando un id a la nueva seccion
+		//agregando un nodo texto a la nueva seccion
 		campP.appendChild(nodoText);
 
+		//obtener hora
+		var getHora = moment().format('LT');
+		var nodoHora = document.createTextNode(getHora);
+
+		//agregar span
+		var camSpan = document.createElement('span');
+		camSpan.classList.add('horaResult');
+		camSpan.appendChild(nodoHora);
 
 		//crear nueva seccion
 		var sectionBottom = document.createElement('section');
+
+		//agregando un id a la nueva seccion
 		sectionBottom.setAttribute('id', 'containerBottom')
 		sectionBottom.appendChild(campP);
-		//sectionBottom.appendChild(camSpan);
+		sectionBottom.appendChild(camSpan);
 
 		document.body.appendChild(sectionBottom);
 
@@ -56,7 +67,7 @@ function disableButton(){
 	}
 	setInterval(actualizaHora,1000);
 
-//funcion contar
+//funcion contador	
 function contar() { 
          var max = "140"; 
          var cadena = document.getElementById('textarea').value;
@@ -79,8 +90,6 @@ function contar() {
                   
              } 
     } 
-
-
 
 //AJUSTAR TAMAÑO DE TEXAREA
 function textAreaAdjust(element) {
