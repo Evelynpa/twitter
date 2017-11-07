@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Twitter</title>
-	<link href="https://fonts.googleapis.com/css?family=Rokkitt:200,300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt:200,300,400,500,600" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -12,25 +12,28 @@
 		<h1>Twitter</h1>
 	</div>
 	<section class="containerCentral">
+		<!-- <img src="assets/img/fondo_twitter.png" alt=""> -->
 		<!-- CONTENEDOR IZQUERDO -->
 		<article class="containerLeft">
 			<h2>Retos del código</h2>
 			<p>Hola</p>
 			<p>Soy front-end developer jr</p>
 			<p><b>CÓDIGO</b></p>
+			<span id="hora"></span>
 		</article> 
 		<!-- CONTENEDOR DERECHO -->
 		<article class="containerRigth">
 			<form action="">
-				<textarea  cols="68" rows="10" class="textarea" id="textarea" placeholder="¿Qué está pasando?"></textarea>
+				<textarea class="textarea" id="textarea" placeholder="¿Qué está pasando?" onkeyup="contar();disableButton(this);" ></textarea>
 				<hr>
-				<input type="button" value="TWEET" id="btnButton">
+				<input type="button" value="TWEET" id="btnButton" >
+				<input type="text" value="140" id="contador" disabled="true">
 			</form>
 			<label for="textCamp"></label>
 		</article>
 	</section>
 	<!-- CONTENEDOR OCULTO -->
-
+	<script type="text/javascript" src="assets/js/moment.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
