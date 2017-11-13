@@ -1,4 +1,3 @@
-
 function add(){
 
 			//obtener el valor del texarea
@@ -19,6 +18,8 @@ function add(){
 		//agregar span
 		var camSpan = document.createElement('span');
 		camSpan.classList.add('horaResult');
+
+		//agregar nodo a span hora
 		camSpan.appendChild(nodoHora);
 
 		//crear nueva seccion
@@ -46,9 +47,18 @@ function disableButton(){
 	var text = document.getElementById('textarea').value;
 	var btnTweet = document.getElementById('btnButton');
 	if (text.length === '') {
+
+		btnTweet.disabled = true;
+		btnTweet.style.backgroundColor = '#8c8c8c';
+
+	}else if(text.length !== ''){
+
 		btnTweet.disabled = false;
-	}else {
-		btnTweet.disabled = false;
+		btnTweet.style.backgroundColor = '#006dbf';
+		btnTweet.style.color = '#fff';
+		btnTweet.style.backgroundColor = '#006dbf';
+		btnTweet.style.cursor = 'pointer';
+
 	}
 }
 
@@ -78,10 +88,10 @@ function contar() {
              if(longitud <= max) { 
              	//document.getElementById("contador").value = max-longitud;
              	if(cont >=130){ 
-      				document.getElementById("contador").style.color = '#0000ff';
+      				document.getElementById("contador").style.color = '#00ffff';
              	}
              	else if(cont >=120){
-             		document.getElementById("contador").style.color = '#00ff00';
+             		document.getElementById("contador").style.color = '#ff00ff';
              	}
 
              } else { 
